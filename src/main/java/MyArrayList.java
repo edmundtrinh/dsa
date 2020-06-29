@@ -9,7 +9,7 @@ public class MyArrayList<E> {
         this.elements = new Object[DEFAULT_CAPACITY];
     }
 
-    public void add(E e) {
+    public void add(final E e) {
         // if size == # elements, double array size
         if (this.size == this.elements.length) {
             expand();
@@ -18,12 +18,13 @@ public class MyArrayList<E> {
         elements[this.size++] = e;
     }
 
-    // Removes element if it exists in MyArrayList. Shuffles the remaining elements to maintain the list order
-    public void remove(E e) {
+    // Removes element if it exists in MyArrayList. Shuffles the remaining elements
+    // to maintain the list order
+    public void remove(final E e) {
 
     }
 
-    public E get(int i) {
+    public E get(final int i) {
         if (i >= this.size || i < 0) {
             throw new IndexOutOfBoundsException("Index not valid.");
         }
@@ -33,7 +34,7 @@ public class MyArrayList<E> {
 
     private void expand() {
         // double array size
-        int newSize = elements.length * 2;
+        final int newSize = elements.length * 2;
         // copy elements from old array into new
         elements = Arrays.copyOf(elements, newSize);
     }
