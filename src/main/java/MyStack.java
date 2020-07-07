@@ -1,7 +1,7 @@
 import java.util.Arrays;
 
 public class MyStack<E> {
-    private static final int DEFAULT_SIZE = 100;
+    private static final int DEFAULT_SIZE = 10;
     private int size;
     private Object elements[];
     
@@ -49,8 +49,10 @@ public class MyStack<E> {
         this.elements = Arrays.copyOf(elements, doubleSize);
     }
     
+    /*
     // Test Cases
     public static void main(String[] args) {
         System.out.println("Hello, world!");
     }
+    */
 }
