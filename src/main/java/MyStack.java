@@ -1,4 +1,4 @@
-*import java.util.Arrays;
+import java.util.Arrays;
 
 public class MyStack<E> {
     private static final int DEFAULT_SIZE = 100;
@@ -47,5 +47,10 @@ public class MyStack<E> {
     private void increaseSize() {
         int doubleSize = this.elements.length * 2;
         this.elements = Arrays.copyOf(elements, doubleSize);
+    }
+    
+    // Test Cases
+    public static void main(String[] args) {
+        System.out.println("Hello, world!");
     }
 }
